@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Journal</h1>
+    </header>
+    <main class="row">
+      <section class="four columns">
+        <header>
+          <h2>New Article</h2>
+        </header>
+        <form>
+          <div>
+            <label>Title</label>
+            <input id="title">
+          </div>
+          <div>
+            <label>Article</label>
+            <textarea id="body"></textarea>
+          </div>
+          <div>
+            <button>Submit</button>
+          </div>
+        </form>
+      </section>
+      <section id="articles" class="eight columns">
+        <header>
+          <h2>Articles</h2>
+        </header>
+      </section>
+    </main>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/5.4.5/pouchdb.min.js"></script>
+    <script src="browser.js"></script>
+  </body>
+</html>
