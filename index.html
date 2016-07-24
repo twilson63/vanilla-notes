@@ -1,38 +1,59 @@
 <!doctype html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  </head>
-  <body>
-    <header>
-      <h1>Journal</h1>
-    </header>
-    <main class="row">
-      <section class="four columns">
-        <header>
-          <h2>New Article</h2>
-        </header>
-        <form>
-          <div>
-            <label>Title</label>
-            <input id="title">
-          </div>
-          <div>
-            <label>Article</label>
-            <textarea id="body"></textarea>
-          </div>
-          <div>
-            <button>Submit</button>
-          </div>
-        </form>
-      </section>
-      <section id="articles" class="eight columns">
-        <header>
-          <h2>Articles</h2>
-        </header>
-      </section>
-    </main>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/5.4.5/pouchdb.min.js"></script>
-    <script src="browser.js"></script>
+<head>
+  <title>vanilla-journal</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <style>
+    .header {
+      text-align: center;
+      background-color: rgba(0,0,0,.8);
+      color: whitesmoke;
+    }
+
+    header > h2 {
+      color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <header class="twelve columns header">
+    <h1>Vanilla Journal</h1>
+  </header>
+  <main class="row">
+    <section id="articles" class="eight columns">
+      <header>
+        <h2>Articles</h2>
+      </header>
+    </section>
+    <section class="four columns">
+      <header>
+        <h2>New Article</h2>
+      </header>
+      <form>
+        <div class="row">
+          <label for="title">Title</label>
+          <input class="u-full-width" type="text" id="title" name="title">
+        </div>
+        <div class="row">
+          <label for="body">Article</label>
+          <textarea class="u-full-width" id="body" name="body"></textarea>
+        </div>
+        <div class="row">
+          <button class="button-primary u-pull-right">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <!--
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/5.4.5/pouchdb.min.js"></script>
+  -->
+  <script src="prepend.js"></script>
+  <script src="value.js"></script>
+  <script src="sdb.js"></script>
+  <script src="hscript.js"></script>
+  <script src="browser.js"></script>
   </body>
 </html>
